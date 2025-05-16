@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced Task Manager</h1>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a task" />
+      
+      <select id="prioritySelect" title="Priority">
+        <option value="1">Priority 1 (Highest)</option>
+        <option value="2">Priority 2</option>
+        <option value="3" selected>Priority 3</option>
+        <option value="4">Priority 4</option>
+        <option value="5">Priority 5 (Lowest)</option>
+      </select>
+
+      <input type="date" id="dueDateInput" title="Due Date" />
+
+      <select id="categorySelect" title="Category">
+        <option value="General" selected>General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <button id="addBtn">Add Task</button>
+    </div>
+
+    <div class="controls">
+      <label>Sort By:
+        <select id="sortSelect">
+          <option value="order">Manual Order</option>
+          <option value="priority">Priority</option>
+          <option value="timestamp">Date Added</option>
+          <option value="dueDate">Due Date</option>
+        </select>
+      </label>
+
+      <label>Filter:
+        <select id="filterSelect">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="incomplete">Incomplete</option>
+          <option value="category-General">Category: General</option>
+          <option value="category-Work">Category: Work</option>
+          <option value="category-Personal">Category: Personal</option>
+          <option value="category-Shopping">Category: Shopping</option>
+          <option value="category-Others">Category: Others</option>
+        </select>
+      </label>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
